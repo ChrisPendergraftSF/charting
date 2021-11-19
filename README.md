@@ -18,7 +18,7 @@
 7. The filters are decoupled from the view, via redux. 
 
 
-A#pplication flow
+#Application flow
 1. App starts, loads initial data into application data as initial value of reducer. 
 2. Filters, if not null are applied to data set. 
 3. A copy collection, as a data wrapper, is called anytime there is a change in the selector modes(status, type, priority, or if they are nulled out )
