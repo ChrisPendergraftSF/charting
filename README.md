@@ -1,13 +1,13 @@
 # Charting test,  total time 3:45min
 
-#Request:
+# Request:
 1. Create a Chart from A Jira Json of a 100 count board view.
 2. Plot Developer on X-axis and developer track count on Y-axis. 
 3. Add filters for Status, Track Type, and Priority, as stacked, additive filters.
 4. Filters can be single or stacked. 
 5. Create with any Charting lib, using react JS
 
-#Challenges - 
+# Challenges - 
 
 1. Data was structured as a board, not grouped by developer.
 2. Additive filters must be applied, or several fields.
@@ -18,7 +18,7 @@
 7. The filters are decoupled from the view, via redux. 
 
 
-#Application flow
+# Application flow
 1. App starts, loads initial data into application data as initial value of reducer. 
 2. Filters, if not null are applied to data set. 
 3. A copy collection, as a data wrapper, is called anytime there is a change in the selector modes(status, type, priority, or if they are nulled out )
