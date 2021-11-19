@@ -10,7 +10,7 @@
 # Challenges - 
 
 1. Data was structured as a board, not grouped by developer.
-2. Additive filters must be applied, or several fields.
+2. Additive filters must be applied, on several fields.
 3. A wrapper collection must be created with assingee and a collection of all tracks. 
 4. Filters are ADD, not OR. So you can drill down
 5. Y axis value is missing, so must be derived from dataset to get tracks-count (Y-axis)
