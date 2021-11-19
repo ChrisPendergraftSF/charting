@@ -1,4 +1,29 @@
-# Getting Started with Create React App
+# Charting test,  total time 3:45min
+
+#Request:
+1. Create a Chart from A Jira Json of a 100 count board view.
+2. Plot Developer on X-axis and developer track count on Y-axis. 
+3. Add filters for Status, Track Type, and Priority, as stacked, additive filters.
+4. Filters can be single or stacked. 
+5. Create with any Charting lib, using react JS
+
+#Challenges - 
+
+1. Data was structured as a board, not grouped by developer.
+2. Additive filters must be applied, or several fields.
+3. A wrapper collection must be created with assingee and a collection of all tracks. 
+4. Filters are ADD, not OR. So you can drill down
+5. Y axis value is missing, so must be derived from dataset to get tracks-count (Y-axis)
+6. X axis displays all devs found in result. 
+7. The filters are decoupled from the view, via redux. 
+
+
+A#pplication flow
+1. App starts, loads initial data into application data as initial value of reducer. 
+2. Filters, if not null are applied to data set. 
+3. A copy collection, as a data wrapper, is called anytime there is a change in the selector modes(status, type, priority, or if they are nulled out )
+4. Always maintains immutable collection we started with (JSON in store) 
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
