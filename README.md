@@ -23,6 +23,7 @@
 2. Filters, if not null are applied to data set. 
 3. A copy collection, as a data wrapper, is called anytime there is a change in the selector modes(status, type, priority, or if they are nulled out )
 4. Always maintains immutable collection we started with (JSON in store) 
+5. No Need for redux-saga, no async calls to manage. Just react-redux. 
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
