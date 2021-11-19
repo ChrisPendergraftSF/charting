@@ -2,8 +2,9 @@ import React,  {useCallback, useEffect, useState  } from 'react';
 import {useSelector} from "react-redux";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const ChartHolder =  function({data}){
+const ChartHolder =  function(){
     const [filteredData, setFilteredData] = useState(undefined)
+    const data = useSelector((state) => state.applicationdata.applicationdata);
 
     const statusType = useSelector((state) => state.statustype.statustype);
     const priority = useSelector((state) => state.priority.priority);

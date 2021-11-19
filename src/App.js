@@ -1,4 +1,4 @@
-import {  useSelector, useDispatch } from "react-redux";
+import {useSelector, useDispatch, Provider} from "react-redux";
 
 import './App.css';
 import {useEffect, useState} from "react";
@@ -7,8 +7,8 @@ import {setIssueType} from "./redux/reducers/issuetype";
 import {setPriority} from "./redux/reducers/priority";
 import ChartHolder from "./components/ChartHolder/Chartholder";
 import ChartFilters from "./components/ChartFilters/Chartfilters"
+import store from "../src/redux/reduxconfig"
 function App() {
-  const appData = useSelector((state) => state.applicationdata.applicationdata);
 
 
 
@@ -16,11 +16,14 @@ function App() {
 
 
   return (
-      <div>
-          <ChartFilters ></ChartFilters>
-        <ChartHolder data={appData} ></ChartHolder>
 
-      </div>
+        <div>
+            <Provider store={store} >
+                <ChartFilters ></ChartFilters>
+                <ChartHolder ></ChartHolder>
+            </Provider>
+        </div>
+
   );
 }
 
